@@ -41,6 +41,8 @@ prove that
 \[
 AB = A^1B_1 + \cdots + A^nB_n.
 \] 
+Suppose $A = (a_{i,j})_{m \times n}$, $B = (b_{i,j})_{n \times p}$, C = $AB = (c_{i,j})_{m \times p}$. \\
+%It is easy to write $c_{i,j} = \sum_{k=1}^{n} a_{ik} b_{kj}$ and then consider $(A^1B_1 + \cdots + A^nB_n)_{ij}$, we have ${A^1B_1 + \cdots + A^nB_n}_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} \cdots + \a_{in}b_{nj} = \sum_{k=1}^{n}a_{ik}b_{kj}$. So $AB = A^1B_1 + \cdots + A^nB_n$.
 
 
 \vspace {0.25cm}\noindent
@@ -198,8 +200,12 @@ W_{3, 3} \cdot (1/2) \transpos{W_{3, 3}}=
 0          & 0          & 0          & 0          & 0          & 0             & 0  &  1\\ 
 \end{pmatrix}
 \] 
+We have $W_{3, 3} = (\alpha_1, \alpha_2, \cdots, \alpha_8)$, then write $\alpha_i^T\alpha_j, \forall i,j = 1,2,\cdots8 \; i \neq j$ there are two conditions: \\
+1. $\alpha_i$ and $\alpha_j$ have elements on the same positions. \\ 
+2. $\alpha_i$ and $\alpha_j$ have elements on different postions. \\
+For the first condition, we have $\alpha_i^T\alpha_j = 1-1=0$ and for the second condition, we have $\alpha_i^T\alpha_j = 0$. Also, $\alpha_i^T\alpha_i = 1 + 1 = 2$, so we can prove that the columns are orthogonal. It
+is the same to prove the rows are orthogonal.
 
-Prove that the columns and the rows of $W_{3, 3}$ are orthogonal.
 
 \medskip
 (3)
