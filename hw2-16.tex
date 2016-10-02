@@ -33,23 +33,32 @@ Francine Leech, Chen Xiang, Reffat Manzur
 
 
 \vspace {0.25cm}\noindent
-{\bf Problem B1 (10 pts).}
-Given any $m\times n$ matrix $A$ and any $n\times p$
-matrix $B$, if we denote the columns of $A$ by $A^1, \ldots, A^n$
-and the rows of $B$ by $B_1, \ldots, B_n$,
-prove that
-\[
-AB = A^1B_1 + \cdots + A^nB_n.
-\] 
-Suppose $A = (a_{i,j})_{m \times n}$, $B = (b_{i,j})_{n \times p}$, C = $AB = (c_{i,j})_{m \times p}$. \\
-%It is easy to write $c_{i,j} = \sum_{k=1}^{n} a_{ik} b_{kj}$ and then consider $(A^1B_1 + \cdots + A^nB_n)_{ij}$, we have ${A^1B_1 + \cdots + A^nB_n}_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} \cdots + \a_{in}b_{nj} = \sum_{k=1}^{n}a_{ik}b_{kj}$. So $AB = A^1B_1 + \cdots + A^nB_n$.
+{\bf Problem B1 (10 pts).} \\
+Suppose $A = (a_{i,j})_{m \times n}$, $B = (b_{i,j})_{n \times p}$, C = $AB = (c_{i,j})_{m \times p}$.
+It is easy to write $c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj},\; \forall i = 1,2,\cdots m.\; j = 1,2,\cdots p$ 
+and then consider $(A^1B_1 + \cdots + A^nB_n)_{ij}$, we have $  (A^1B_1 + \cdots + A^nB_n)_{ij} = (a_{i1}b_{1j} + a_{i2}b_{2j} \cdots a_{in}b_{nj}) = \sum_{k=1}^{n} a_{ik} b_{kj}$. So $AB = A^1B_1 + \cdots + A^nB_n$.
 
 
 \vspace {0.25cm}\noindent
-{\bf Problem B2 (10 pts).}
-Let $\mapdef{f}{E}{F}$ be a linear map which is also a bijection
-(it is injective and surjective). Prove that the inverse function
-$\mapdef{f^{-1}}{F}{E}$ is linear. 
+{\bf Problem B2 (10 pts).} \\
+Because $f$ is a linear map, thus we have 
+\[
+f(x + y) = f(x) + f(y)
+\]
+\[
+f(\lambda x) = \lambda f(x)
+\]
+So write the inverse function $g = f^{-1}$ and $x_1,x_2 \in E$, we have 
+\begin{align*}
+\exists x \in E , \; x = g(f(x_1) + f(x_2)) &\Rightarrow 
+f(x) = f(x_1) + f(x_2) = f(x_1 + x_2) \\
+&\Rightarrow x = x_1 + x_2 \\
+&\Rightarrow g(f(x)) = g(f(x_1 + x_2)) = g(f(x_1)) + g(f(x_2)) \\
+\exists x^* \in E, \; x^* = g(f(\lambda x)) &\Rightarrow f(x^*) = f(\lambda x) \\
+&\Rightarrow x^* = \lambda x \\
+&\Rightarrow g(\lambda f(x)) = g(f(\lambda x)) = \lambda g(f(x))
+\end{align*}
+
 
 
 \vspace {0.25cm}\noindent
@@ -411,6 +420,190 @@ Prove that
 \[
 \transpos{W_n} W_n = B_n, \quad\hbox{for all $n \geq 1$}.
 \]
+
+
+We can find \[
+\begin{pmatrix}
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+& 
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+\end{pmatrix} \in M_{2^n,2^n}
+\] 
+and it is easy to get 
+\[
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & \vdots \\
+0 & 1 & \cdots & \vdots \\
+\vdots  & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots &1 \\
+0 & 0 & \cdots &1 \\
+\end{pmatrix} 
+\in M_{2^n, 2^{n-1}},
+\]
+\[
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+-1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & \vdots \\
+0 & -1 & \cdots & \vdots \\
+\vdots  & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots &1 \\
+0 & 0 & \cdots &-1 \\
+\end{pmatrix} 
+\in M_{2^n, 2^{n-1}},
+\]
+so 
+\[
+\begin{pmatrix}
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+&
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & \cdots & \cdots  & 1  & 0 & 0 \\
+1 & 0 & \cdots & \cdots  & -1 & 0 & 0 \\
+0 & 1 & \cdots & \cdots  & 0  & 1 & \vdots \\
+0 & 1 & \cdots & \cdots  & 0  & -1 & \vdots \\
+\vdots  & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots &1 &0  & \cdots & 1 \\
+0 & 0 & \cdots &1 &0  & \cdots & -1 
+\end{pmatrix} 
+= W_{n,n}.
+\]
+\begin{align*}
+W_{n, n} \transpos{W_{n, n}} &= 
+\begin{pmatrix}
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+& 
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+\end{pmatrix}
+\transpos{
+\begin{pmatrix}
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+& 
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+\end{pmatrix}} \\
+&=
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+\transpos{[
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+]} + 
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+\transpos{[
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+} \\
+\end{align*}
+according to the facts above, we have
+\begin{align*}
+W_{n, n} \transpos{W_{n, n}} &= 
+[I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+[I_{2^{n-1}} \tensor 
+\transpos{\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+}] + 
+[I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+[I_{2^{n-1}} \tensor 
+\transpos{
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}}] \\
+&=
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 &1 \\
+1 &1 
+\end{pmatrix} +
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+1 &-1 \\
+-1 &1 
+\end{pmatrix} \\
+&= 
+I_{2^{n-1}} \tensor 
+\begin{pmatrix}
+2 &0 \\
+0 &2 
+\end{pmatrix} = 
+2I_{2^n} 
+\end{align*}
+
+
+
+
 
 \medskip
 (6)
