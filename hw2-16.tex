@@ -738,6 +738,28 @@ $f_i^2 = f_i$, $1\leq i \leq p$.
 $f_j \circ f_i =  0$, for all $i \not= j$, $1\leq i, j \leq p$.
 \end{enumerate}
 
+(1) $\Rightarrow$ (2) 
+
+We multiply $f_i$ on each side of the equation, then get 
+\[
+f_i^2 + \sum_{j \neq i} f_j \circ f_i = f_i
+\]
+\[
+ \sum_{j \neq i} f_j \circ f_i  = 0
+\] \\
+
+Because $E$ is finite-dimensional, then for all $y \in E$ we can write $y = \sum \lambda_i x_i$, where $(x_i)$ is the base. Then for all $y \in E$, we have $ \sum_{j \neq i} f_j \circ f_i (y) = 0$, suppose there is a $k$ which makes $ f_k \circ f_i \neq 0 $ then $ker( f_k \circ f_i ) = E$, thus $ f_k \circ f_i  = 0$, which is a contradiction. \\
+
+(2) $\Rightarrow$ (1)
+
+We multiply $f_i, \; \forall i = 1,2,\cdots, p$ on each side of the equation, then get 
+\[
+f_i^2 + \sum_{j \neq i} f_j \circ f_i = f_i
+\]
+\[
+ f_i^2 = f_i
+\]
+
 
 \vspace{0.5cm}\noindent
 {\bf TOTAL: 200  + 70 points.}
