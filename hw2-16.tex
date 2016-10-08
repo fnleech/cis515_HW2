@@ -254,12 +254,6 @@ W_{3, 3} \cdot (1/2) \transpos{W_{3, 3}}=
 0          & 0          & 0          & 0          & 0          & 0             & 0  &  1\\ 
 \end{pmatrix}
 \] 
-We have $W_{3, 3} = (\alpha_1, \alpha_2, \cdots, \alpha_8)$, then write $\alpha_i^T\alpha_j, \forall i,j = 1,2,\cdots8 \; i \neq j$ there are two conditions: \\
-1. $\alpha_i$ and $\alpha_j$ have elements on the same positions. \\ 
-2. $\alpha_i$ and $\alpha_j$ have elements on different postions. \\
-For the first condition, we have $\alpha_i^T\alpha_j = 1-1=0$ and for the second condition, we have $\alpha_i^T\alpha_j = 0$. Also, $\alpha_i^T\alpha_i = 1 + 1 = 2$, so we can prove that the columns are orthogonal. It
-is the same to prove the rows are orthogonal.
-
 
 \medskip
 (3)
@@ -464,13 +458,54 @@ W_{3, 2}*W_{3, 1} =
 0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
 \end{pmatrix}
 \]
-
 \[
 =
 \begin{pmatrix}
-
+1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\   
+1 & 1 & -1 & 0 & 0 & 0 & 0 & 0 \\
+1 & -1 & 0 & 1 & 0 &  0 &  0 &  0 \\
+1 & -1 & 0 & -1 & 0 & 0 & 0 &  0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\end{pmatrix}
+= 
+\begin{pmatrix}
+W_2 & 0_{4, 4} \\
+0_{4, 4}         & I_4
+\end{pmatrix},
+\]
+\\
+\pmb{Conclude $W_{3, 3}*W_{3, 2}*W_{3, 1} = W_3$}
+\\
+\[
+W_{3, 3}*W_{3, 2}*W_{3, 1} = 
+\begin{pmatrix}
+1  &  0  &  0 & 0 & 1   &  0   & 0    & 0  \\
+1  &  0  &  0 & 0 & -1 &  0   & 0    & 0  \\
+0   &  1  &  0 & 0 &  0  & 1   & 0    & 0  \\
+0   &  1  &  0 & 0 &  0  & -1 & 0    & 0  \\
+0   &  0  &  1 & 0 &  0  &  0  & 1    & 0  \\
+0   &  0  &  1 & 0 &  0  &  0  & -1  & 0  \\
+0   &  0  &  0 & 1 &  0  &  0  & 0    & 1  \\
+0   &  0  &  0 & 1 &  0  &  0  & 0    & -1  \\
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\   
+1 & 1 & -1 & 0 & 0 & 0 & 0 & 0 \\
+1 & -1 & 0 & 1 & 0 &  0 &  0 &  0 \\
+1 & -1 & 0 & -1 & 0 & 0 & 0 &  0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
 \end{pmatrix}
 \]
+\[
+=
+\]
+
 
 
 \medskip
@@ -480,7 +515,14 @@ are orthogonal. Deduce from this that the columns of
 $W_3$  are orthogonal, and the rows of $W_3^{-1}$ are orthogonal.  
 Are the rows  of $W_3$ orthogonal? 
 Are the columns  of $W_3^{-1}$ orthogonal? 
-Find  the inverse of $W_{3, 2}$ and the inverse of $W_{3, 1}$.
+Find  the inverse of $W_{3, 2}$ and the inverse of $W_{3, 1}$. \\
+
+We have $W_{3, 3} = (\alpha_1, \alpha_2, \cdots, \alpha_8)$, then write $\alpha_i^T\alpha_j, \forall i,j = 1,2,\cdots8 \; i \neq j$ there are two conditions: \\
+1. $\alpha_i$ and $\alpha_j$ have elements on the same positions. \\ 
+2. $\alpha_i$ and $\alpha_j$ have elements on different postions. \\
+For the first condition, we have $\alpha_i^T\alpha_j = 1-1=0$ and for the second condition, we have $\alpha_i^T\alpha_j = 0$. Also, $\alpha_i^T\alpha_i = 1 + 1 = 2$, so we can prove that the columns are orthogonal. It
+is the same to prove the rows are orthogonal. \\
+
 
 \medskip
 (5)
