@@ -11,8 +11,8 @@
 %\input ../basicmath/basicmathmac.tex
 %
 %\input ../lamacb.tex
-\input ../mac.tex
-\input ../mathmac.tex
+\input ../cis515_HW2/mac.tex
+\input ../cis515_HW2/mathmac.tex
 
 \def\fseq#1#2{(#1_{#2})_{#2\geq 1}}
 \def\fsseq#1#2#3{(#1_{#3(#2)})_{#2\geq 1}}
@@ -67,7 +67,7 @@ Given two vectors spaces $E$ and $F$, let $(u_i)_{i\in I}$
 be any basis of $E$ and let $(v_i)_{i\in I}$ be any
 family of vectors in $F$. Prove that the unique linear map
 $\mapdef{f}{E}{F}$ such that $f(u_i) = v_i$ for all $i\in I$ 
-is surjective iff  $(v_i)_{i\in I}$ spans $F$.
+is surjective iff  $(v_i)_{i\in I}$ spans $F$. \\
 
 For $x\epsilon E$, it can be written as $x_{1}u_{1}+x_{2}u_{2}+\cdots+x_{n}u_{n}$as
 $(u_{i})_{i\epsilon I}$is a basis of $E$ and $(u_{i})_{i\epsilon I}$spans
@@ -75,7 +75,8 @@ $E$ . Then, $f(x)=x_{1}f(u_{1})+x_{2}f(u_{2})+\cdots+x_{n}f(u_{n})$.
 Since $f(u_{i})=v_{i}$, this can be rewritten as: $f(x)=x_{1}v_{1}+x_{2}v_{2}+\cdots+x_{n}v_{n}$.
 If the linear map $f$ is surjective, then every element in $F$ has
 a corresponding element in $E$ and $f(x)=x_{1}v_{1}+x_{2}v_{2}+\cdots+x_{n}v_{n}$
-indicates that $(v_{i})_{i\epsilon I}$ must span $F$.
+indicates that $(v_{i})_{i\epsilon I}$ must span $F$.\\
+
 \vspace {0.25cm}\noindent
 {\bf Problem B4 (10 pts).}
 Let $\mapdef{f}{E}{F}$ be a linear map 
@@ -341,6 +342,136 @@ W_2 =
 1  & -1  &   0   & -1
 \end{pmatrix}.
 \]
+\pmb{First: $W_{3, 2} c = (c_1 + c_3, c_1- c_3, c_2 + c_4, c_2 - c_4, c_5, c_6, c_7, c_8)$}
+
+\[
+W_{3, 2} c =
+\begin{pmatrix}
+1  &  0  & 1    &  0   & 0    & 0  &  0  &  0  \\
+1  &  0  &  -1 &  0   & 0    & 0  &  0  &  0 \\
+0   &  1  &  0  &  1   & 0    & 0  &  0  &  0 \\
+0   &  1  &  0  &  -1 & 0    & 0  &  0  &  0 \\
+0   &  0  &  0 & 0 &  1  &  0  & 0    & 0  \\
+0   &  0  &  0 & 0 &  0  &  1  &  0   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  &  1   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+c_1 \\
+c_2 \\
+c_3 \\
+c_4 \\
+c_5 \\
+c_6 \\
+c_7 \\
+c_8 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+c_1 + 0 + c_3 + 0 + 0 + 0 + 0 +0 \\
+c_1 + 0 - c_3 + 0 + 0 + 0 + 0 +0 \\
+0 + c_2 + 0 + c_4 + 0 + 0 + 0 +0 \\
+0 + c_2 + 0 - c_4 + 0 + 0 + 0 +0 \\
+0 + 0 + 0 + 0 + c_5 + 0 + 0 + 0  \\
+0 + 0 + 0 + 0 + 0 + c_6 + 0 + 0 \\
+0 + 0 + 0 + 0 + 0 + 0 + c_7 + 0 \\
+0 + 0 + 0 + 0 + 0 + 0 + 0 + c_8 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+c_1 + c_3 \\
+c_1 - c_3 \\
+c_2 + c_4 \\
+c_2 - c_4 \\
+c_5 \\
+c_6 \\
+c_7 \\
+c_8 \\
+\end{pmatrix}
+\]
+\pmb{Second: $W_{3, 1} c = (c_1 + c_2, c_1- c_2, c_3,  c_4, c_5, c_6, c_7, c_8)$} 
+
+\[
+W_{3, 1} c =
+\begin{pmatrix}
+1  &  1   & 0    &  0   & 0    & 0  &  0  &  0  \\
+1  & -1  &  0   &  0   & 0    & 0  &  0  &  0 \\
+0   &  0  &  1   &   0   & 0    & 0  &  0  &  0 \\
+0   &  0   &  0  &   1 & 0    & 0  &  0  &  0 \\
+0   &  0  &  0 & 0 &  1  &  0  & 0    & 0  \\
+0   &  0  &  0 & 0 &  0  &  1  &  0   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  &  1   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+c_1 \\
+c_2 \\
+c_3 \\
+c_4 \\
+c_5 \\
+c_6 \\
+c_7 \\
+c_8 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+c_1 + c_2 + 0 + 0 + 0 + 0 + 0 +0 \\
+c_1 - c_2 + 0 + 0 + 0 + 0 + 0 +0 \\
+0 + 0+ c_3 + 0 + 0 + 0 + 0 +0 \\
+0 + 0 + 0 + c_4 + 0 + 0 + 0 +0 \\
+0 + 0 + 0 + 0 + c_5 + 0 + 0 + 0  \\
+0 + 0 + 0 + 0 + 0 + c_6 + 0 + 0 \\
+0 + 0 + 0 + 0 + 0 + 0 + c_7 + 0 \\
+0 + 0 + 0 + 0 + 0 + 0 + 0 + c_8 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+c_1 + c_2 \\
+c_1 - c_2 \\
+c_3 \\
+c_4 \\
+c_5 \\
+c_6 \\
+c_7 \\
+c_8 \\
+\end{pmatrix}
+\]
+\\
+\pmb{Now check $W_{3, 2}*W_{3, 1}$}
+\\
+\[
+W_{3, 2}*W_{3, 1} = 
+\begin{pmatrix}
+1  &  0  & 1    &  0   & 0    & 0  &  0  &  0  \\
+1  &  0  &  -1 &  0   & 0    & 0  &  0  &  0 \\
+0   &  1  &  0  &  1   & 0    & 0  &  0  &  0 \\
+0   &  1  &  0  &  -1 & 0    & 0  &  0  &  0 \\
+0   &  0  &  0 & 0 &  1  &  0  & 0    & 0  \\
+0   &  0  &  0 & 0 &  0  &  1  &  0   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  &  1   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
+\end{pmatrix}
+\begin{pmatrix}
+1  &  1   & 0    &  0   & 0    & 0  &  0  &  0  \\
+1  & -1  &  0   &  0   & 0    & 0  &  0  &  0 \\
+0   &  0  &  1   &   0   & 0    & 0  &  0  &  0 \\
+0   &  0   &  0  &   1 & 0    & 0  &  0  &  0 \\
+0   &  0  &  0 & 0 &  1  &  0  & 0    & 0  \\
+0   &  0  &  0 & 0 &  0  &  1  &  0   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  &  1   & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
+\end{pmatrix}
+\]
+
+\[
+=
+\begin{pmatrix}
+
+\end{pmatrix}
+\]
+
 
 \medskip
 (4) 
