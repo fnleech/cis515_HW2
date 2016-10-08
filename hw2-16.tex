@@ -80,6 +80,43 @@ A = u\transpos{v}
 \]
 with $u$ a nonzero column vector of dimension $m$ and $v$ a 
 nonzero column vector  of dimension $n$.
+$dim(E)=n$ indicates that the basis of $E$ consists of $n$ vectors
+and $dim(F)=m$ indicates the basis of $F$ consists of $m$ vectors.
+From class notes, we know that $M(f)=\begin{pmatrix}a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{pmatrix}=A$, an $mxn$ matrix.
+
+$u=\begin{pmatrix}u_{1}\\
+u_{2}\\
+u_{3}\\
+\vdots\\
+u_{m}
+\end{pmatrix}$ and $v^{T}=\begin{pmatrix}v_{1} & v_{2} & v_{3} & \cdots & v_{n}\end{pmatrix}$
+so $uv^{T}$ is an $mxn$ matrix of the form: $\begin{pmatrix}u_{1}v_{1} & u_{1}v_{2} & u_{1}v_{3} & \cdots & u_{1}v_{n}\\
+u_{2}v_{1} & u_{2}v_{2} & u_{2}v_{3} & \cdots & u_{2}v_{n}\\
+u_{3}v_{1} & u_{3}v_{2} & u_{3}v_{3} & \cdots & u_{3}v_{n}\\
+\vdots & \vdots & \vdots & \cdots & \vdots\\
+u_{m}v_{1} & u_{m}v_{2} & u_{m}v_{3} & \cdots & u_{m}v_{n}
+\end{pmatrix}=v_{1}\begin{pmatrix}u_{1}\\
+u_{2}\\
+u_{3}\\
+\vdots\\
+u_{m}
+\end{pmatrix}+v_{2}\begin{pmatrix}u_{1}\\
+u_{2}\\
+u_{3}\\
+\vdots\\
+u_{m}
+\end{pmatrix}+\cdots v_{n}\begin{pmatrix}u_{1}\\
+u_{2}\\
+u_{3}\\
+\vdots\\
+u_{m}
+\end{pmatrix}$. Since every column in the matrix of $f$ is a multiple of one column,
+the rank is 1 for $f$ and the matrix is always of this form by definition
+for an $mxn$ matrix.
+
 
 
 
