@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 OCT 2016 17:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 OCT 2016 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -129,12 +129,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 64--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--79
+Underfull \hbox (badness 10000) in paragraph at lines 64--73
 
  []
 
@@ -142,85 +137,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--79
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (48.16545pt too wide) detected at line 228
+Overfull \hbox (48.16545pt too wide) detected at line 207
 \OML/cmm/m/it/12 W[] \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 =\
 OT1/cmr/m/n/12 2)\OML/cmm/m/it/12 W[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A
  []
  []
 
 
-Overfull \hbox (65.15837pt too wide) detected at line 242
+Overfull \hbox (65.15837pt too wide) detected at line 221
 \OT1/cmr/m/n/12 = []
  []
 
-[3] [4]
-Overfull \hbox (28.62177pt too wide) detected at line 386
+
+Overfull \hbox (28.62177pt too wide) detected at line 286
 \OML/cmm/m/it/12 W[]c \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n
 /12 = [] = []
  []
 
 
-Overfull \hbox (19.2884pt too wide) detected at line 434
+Overfull \hbox (19.2884pt too wide) detected at line 334
 \OML/cmm/m/it/12 W[]c \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n
 /12 = [] = []
  []
 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 334--338
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--382
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 425--434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--434
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 478--482
+Underfull \hbox (badness 10000) in paragraph at lines 446--451
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--517
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 518--523
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
 
  []
 
 [6] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 964--965
+Underfull \hbox (badness 10000) in paragraph at lines 905--906
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 966--967
+Underfull \hbox (badness 10000) in paragraph at lines 907--908
 
  []
 
-[10] [11] (./hw2-16.aux) ) 
+[10] (./hw2-16.aux) ) 
 Here is how much of TeX's memory you used:
  1590 strings out of 493014
  15790 string characters out of 6133351
- 107944 words of memory out of 5000000
+ 109944 words of memory out of 5000000
  5164 multiletter control sequences out of 15000+600000
  9796 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,20n,24p,360b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
-.pfb>
-Output written on hw2-16.pdf (11 pages, 155449 bytes).
+ 27i,20n,24p,1231b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+
+Output written on hw2-16.pdf (10 pages, 155665 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -62,13 +62,7 @@ f(x) = f(x_1) + f(x_2) = f(x_1 + x_2) \\
 
 
 \vspace {0.25cm}\noindent
-{\bf Problem B3 (10 pts).}
-Given two vectors spaces $E$ and $F$, let $(u_i)_{i\in I}$
-be any basis of $E$ and let $(v_i)_{i\in I}$ be any
-family of vectors in $F$. Prove that the unique linear map
-$\mapdef{f}{E}{F}$ such that $f(u_i) = v_i$ for all $i\in I$ 
-is surjective iff  $(v_i)_{i\in I}$ spans $F$. \\
-
+{\bf Problem B3 (10 pts).} \\
 For $x\epsilon E$, it can be written as $x_{1}u_{1}+x_{2}u_{2}+\cdots+x_{n}u_{n}$as
 $(u_{i})_{i\epsilon I}$is a basis of $E$ and $(u_{i})_{i\epsilon I}$spans
 $E$ . Then, $f(x)=x_{1}f(u_{1})+x_{2}f(u_{2})+\cdots+x_{n}f(u_{n})$.
@@ -78,7 +72,7 @@ a corresponding element in $E$ and $f(x)=x_{1}v_{1}+x_{2}v_{2}+\cdots+x_{n}v_{n}
 indicates that $(v_{i})_{i\epsilon I}$ must span $F$.\\
 
 \vspace {0.25cm}\noindent
-{\bf Problem B4 (10 pts).}
+{\bf Problem B4 (10 pts).} \\
 Let $\mapdef{f}{E}{F}$ be a linear map 
 with $\mathrm{dim}(E) = n$ and $\mathrm{dim}(F)  = m$.
 Prove that $f$ has rank $1$ iff $f$ is represented by an
@@ -129,22 +123,7 @@ for an $mxn$ matrix.
 
 
 \vspace {0.25cm}\noindent
-{\bf Problem B5 (120 pts).} (Haar extravaganza)
-Consider the matrix
-\[
-W_{3, 3} =
-\begin{pmatrix}
-1  &  0  &  0 & 0 & 1   &  0   & 0    & 0  \\
-1  &  0  &  0 & 0 & -1 &  0   & 0    & 0  \\
-0   &  1  &  0 & 0 &  0  & 1   & 0    & 0  \\
-0   &  1  &  0 & 0 &  0  & -1 & 0    & 0  \\
-0   &  0  &  1 & 0 &  0  &  0  & 1    & 0  \\
-0   &  0  &  1 & 0 &  0  &  0  & -1  & 0  \\
-0   &  0  &  0 & 1 &  0  &  0  & 0    & 1  \\
-0   &  0  &  0 & 1 &  0  &  0  & 0    & -1  \\
-\end{pmatrix}
-\]
-
+{\bf Problem B5 (120 pts).} \\
 \medskip
 (1)
 
@@ -256,86 +235,7 @@ W_{3, 3} \cdot (1/2) \transpos{W_{3, 3}}=
 \] 
 
 \medskip
-(3)
-Let $W_{3, 2}$ and $W_{3, 1}$ be the following matrices:
-\[
-W_{3, 2} =
-\begin{pmatrix}
-1  &  0  & 1    &  0   & 0    & 0  &  0  &  0  \\
-1  &  0  &  -1 &  0   & 0    & 0  &  0  &  0 \\
-0   &  1  &  0  &  1   & 0    & 0  &  0  &  0 \\
-0   &  1  &  0  &  -1 & 0    & 0  &  0  &  0 \\
-0   &  0  &  0 & 0 &  1  &  0  & 0    & 0  \\
-0   &  0  &  0 & 0 &  0  &  1  &  0   & 0  \\
-0   &  0  &  0 & 0 &  0  &  0  &  1   & 0  \\
-0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
-\end{pmatrix},
-\quad
-W_{3, 1} =
-\begin{pmatrix}
-1  &  1   & 0    &  0   & 0    & 0  &  0  &  0  \\
-1  & -1  &  0   &  0   & 0    & 0  &  0  &  0 \\
-0   &  0  &  1   &   0   & 0    & 0  &  0  &  0 \\
-0   &  0   &  0  &   1 & 0    & 0  &  0  &  0 \\
-0   &  0  &  0 & 0 &  1  &  0  & 0    & 0  \\
-0   &  0  &  0 & 0 &  0  &  1  &  0   & 0  \\
-0   &  0  &  0 & 0 &  0  &  0  &  1   & 0  \\
-0   &  0  &  0 & 0 &  0  &  0  & 0    & 1  \\
-\end{pmatrix}.
-\]
-Show that given any vector $c = (c_1, c_2, c_3, c_4, c_5, 
-c_6,c_7, c_8)$, the result $W_{3, 2} c$ of applying $W_{3,2}$ to $c$ is 
-\[
-W_{3, 2} c =
-(c_1 + c_3, c_1- c_3, c_2 + c_4, c_2 - c_4, c_5, c_6, c_7, c_8),
-\]
-the second step in reconstructing a vector  from its Haar coefficients, 
-and the result $W_{3, 1} c$ of applying $W_{3, 1}$ to $c$ is 
-\[
-W_{3, 1} c =
-(c_1 + c_2, c_1- c_2, c_3,  c_4, c_5, c_6, c_7, c_8),
-\]
-the first step in reconstructing a vector  from its Haar coefficients. 
-
-\medskip
-Conclude that
-\[
-W_{3, 3} W_{3, 2}W_{3, 1} = W_3,
-\]
-the Haar matrix 
-\[
-W_3 = 
-\begin{pmatrix}
-1  &  1   &  1  &  0   &  1  &  0  &  0  &  0  \\  
-1  &  1   &  1  &  0   & -1 &  0  &  0  &  0 \\
-1  &  1   & -1 &  0   &  0  &  1  &  0  &  0 \\
-1  &  1   & -1 &  0   &  0  & -1 &  0  &  0 \\
-1  & -1  &  0  &  1   &  0  &  0  &  1  &  0 \\
-1  & -1  &  0  &  1   &  0  &  0  & -1 &  0 \\
-1  & -1  &  0  & -1  &  0  &  0  &  0  &  1 \\
-1  & -1  &  0  & -1  &  0  &  0  &  0  & -1
-\end{pmatrix}.
-\]
-
-\hint
-First, check that
-\[
-W_{3, 2}W_{3, 1} = 
-\begin{pmatrix}
-W_2 & 0_{4, 4} \\
-0_{4, 4}         & I_4
-\end{pmatrix},
-\]
-where
-\[
-W_2 = 
-\begin{pmatrix}
-1  &  1   &   1   &  0 \\
-1  &  1   &  -1  &  0 \\
-1  & -1  &   0   &  1 \\
-1  & -1  &   0   & -1
-\end{pmatrix}.
-\]
+(3) \\
 \pmb{First: $W_{3, 2} c = (c_1 + c_3, c_1- c_3, c_2 + c_4, c_2 - c_4, c_5, c_6, c_7, c_8)$}
 
 \[
@@ -503,26 +403,65 @@ W_{3, 3}*W_{3, 2}*W_{3, 1} =
 \end{pmatrix}
 \]
 \[
-=
+= 
+\begin{pmatrix}
+1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\   
+1 & 1 & 1 & 0 & -1 & 0 & 0 & 0 \\
+1 & 1 & -1 & 0 & 0 &  1 &  0 &  0 \\
+1 & 1 & -1 & 0 & 0 & -1 & 0 &  0 \\
+1 & -1 & 0 & 1 & 0 & 0 & 1 & 0 \\
+1 & -1 & 0 & 1 & 0 & 0 & -1 & 0 \\
+1 & -1 & 0 & -1 & 0 & 0 & 0 & 1 \\
+1 & -1 & 0 & -1 & 0 & 0 & 0 & -1 \\
+\end{pmatrix}
 \]
 
 
+We see that in the first row of the $W_{3,3}$ matrix, there is at least $1$ $1$ in the columns $1$ through $4$ in each of the $8$ rows. We are guaranteed that the first column in the $W_3$ matrix is all $1$'s because, every $1$ in $W_{3,3}$ will be multiplied by at least $1$'s located in the first $4$ rows in the first column of  $W_{3,2}*W_{3,1}$. We can apply the same theory to get the second column of $W_3$. The change here is that there are $2$ $-1$'s located in the 3rd and 4th row in the second column of $W_{3,2}*W_{3,1}$. Now, the last 4 rows in the second column of $W_3$ will be $-1$. Column 3 in $W_3$ will have a  1 in the first 2 rows and a -1 in the next two rows because only the first 4 rows in $W_{3,3}$ have $1$'s in the first two columns. Using the same idea, rows 5 and 6 will have 1 and the last two rows will have -1 in $W_3$. Finally, the last 4 columns in $W_3$ will have a 1 and -1. The 1 and -1 in $W_{3,3}$ is in the 5th, 6th, 7th, and 8th columns, and the last 4 columns in $W_{3,2}*W_{3,1}$ are $0s$ in the first $4$ rows and an $4x4$ identity matrix in the last $4$ rows. With the row and column multiplication, we are guaranteed the shifting 1 and -1 in the last 4 columns of $W_3$. 
 
 \medskip
 (4) 
-Prove that the columns and the rows of $W_{3, 2}$ and $W_{3, 1}$
-are orthogonal. Deduce from this that the columns of
-$W_3$  are orthogonal, and the rows of $W_3^{-1}$ are orthogonal.  
-Are the rows  of $W_3$ orthogonal? 
-Are the columns  of $W_3^{-1}$ orthogonal? 
-Find  the inverse of $W_{3, 2}$ and the inverse of $W_{3, 1}$. \\
 
 We have $W_{3, 3} = (\alpha_1, \alpha_2, \cdots, \alpha_8)$, then write $\alpha_i^T\alpha_j, \forall i,j = 1,2,\cdots8 \; i \neq j$ there are two conditions: \\
 1. $\alpha_i$ and $\alpha_j$ have elements on the same positions. \\ 
 2. $\alpha_i$ and $\alpha_j$ have elements on different postions. \\
 For the first condition, we have $\alpha_i^T\alpha_j = 1-1=0$ and for the second condition, we have $\alpha_i^T\alpha_j = 0$. Also, $\alpha_i^T\alpha_i = 1 + 1 = 2$, so we can prove that the columns are orthogonal. It
 is the same to prove the rows are orthogonal. \\
-
+\\
+\pmb{Inverse of $W_{3, 2}$}
+\\
+We see that in $W_{3, 2}$ , the last 4 rows already have a diagonal with all $1$'s. The only thing left is to manipulate the first 4 rows. Similar to $W_{3,3}$, the transpose of $W_{3, 2}$ is $(1/2) \transpos{W_{3, 2}}$ of the first 4 rows and 4 columns.\\
+\[
+inv(W_{3, 2}) = 
+\begin{pmatrix}
+0.5  &  0.5  &  0 & 0 & 0   &  0   & 0    & 0  \\
+0  &  0  &  0.5 & 0.5 & 0 &  0   & 0    & 0  \\
+0.5   &  -0.5  &  0 & 0 &  0  & 0   & 0    & 0  \\
+0   &  0  &  0.5 & -0.5 &  0  & 0 & 0    & 0  \\
+0   &  0  &  0 & 0 &  1  &  0 & 0    & 0  \\
+0   &  0  &  0 & 0 &  0  &  1 & 0  & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 1    & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 0    & 1 \\
+\end{pmatrix}
+\]
+\\
+\pmb{Inverse of $W_{3, 1}$ }
+\\
+6 rows of $W_{3, 1}$ is already the identity matrix. Thus only the first $2x2$ submatrix in $W_{3, 1}$ has to be manipulated to find it's inverse. We can use a similar method as above, to find that we only work that has to be done is taking the $\frac{1}{2} \transpos{W_{3, 1}}$ of the $2x2$ submatrix. \\
+\[
+inv(W_{3, 1}) = 
+\begin{pmatrix}
+0.5  &  0.5  &  0 & 0 & 0   &  0   & 0    & 0  \\
+0.5 &  -0.5  &  0 & 0 & 0 &  0   & 0    & 0  \\
+0   &  0  &  1 & 0 &  0  & 0   & 0    & 0  \\
+0   &  0  &  0 & 1 &  0  & 0 & 0    & 0  \\
+0   &  0  &  0 & 0 &  1  &  0 & 0    & 0  \\
+0   &  0  &  0 & 0 &  0  &  1 & 0  & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 1    & 0  \\
+0   &  0  &  0 & 0 &  0  &  0  & 0    & 1 \\
+\end{pmatrix}
+\]
+\\
 
 \medskip
 (5)
