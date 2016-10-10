@@ -486,98 +486,6 @@ of $W_{n, n}$ are orthogonal.
 \medskip
 {\bf Extra credit (30 pts.)}
 
-\medskip
-Given a $m\times n$ matrix $A = (a_{i j})$ and a $p\times q$ matrix
-$B = (b_{i j})$, the {\it Kronecker product\/} (or {\it tensor
-  product\/}) $A\tensor B$ of $A$ and $B$ is the $mp\times nq$ matrix
-\[
-A\tensor B =
-\begin{pmatrix}
-a_{1 1} B & a_{1 2} B & \cdots & a_{1 n} B \\
-a_{2 1} B & a_{2 2} B & \cdots & a_{2 n} B \\
-\vdots  & \vdots & \ddots & \vdots \\
-a_{m 1} B & a_{m 2} B & \cdots & a_{m n} B 
-\end{pmatrix} .
-\]
-It can be shown (and you may use these facts without proof) that
-$\tensor$ is associative and that
-\begin{align*}
-(A\tensor B)(C\tensor D) & = AC \tensor BD \\
-\transpos{(A\tensor B)} & = \transpos{A} \tensor \transpos{B}, 
-\end{align*}
-whenever $AC$ and $BD$ are well defined.
-
-\medskip
-Check that
-\[
-W_{n, n} =
-\begin{pmatrix}
-I_{2^{n-1}} \tensor 
-\begin{pmatrix}
-1 \\
-1
-\end{pmatrix}
-& 
-I_{2^{n-1}} \tensor 
-\begin{pmatrix}
-1 \\
--1
-\end{pmatrix}
-\end{pmatrix} ,
-\]
-and that
-\[
-W_{n} =
-\begin{pmatrix}
-W_{n-1} \tensor 
-\begin{pmatrix}
-1 \\
-1
-\end{pmatrix}
-& 
-I_{2^{n-1}} \tensor 
-\begin{pmatrix}
-1 \\
--1
-\end{pmatrix}
-\end{pmatrix} .
-\]
-
-
-\medskip
-Use the above to reprove that
-\[
-W_{n, n}\transpos{W_{n, n}} = 2I_{2^n}.
-\]
-Let
-\[
-B_1 =
-2
-\begin{pmatrix}
-1 & 0 \\
-0 & 1
-\end{pmatrix}
-= 
-\begin{pmatrix}
-2 & 0 \\
-0 & 2
-\end{pmatrix}
-\]
-and for $n \geq 1$,
-\[
-B_{n+1} =
-2
-\begin{pmatrix}
-B_n & 0 \\
-0 & I_{2^n}
-\end{pmatrix}.
-\]
-Prove that
-\[
-\transpos{W_n} W_n = B_n, \quad\hbox{for all $n \geq 1$}.
-\]
-
-
 We can find \[
 \begin{pmatrix}
 I_{2^{n-1}} \tensor 
@@ -756,7 +664,108 @@ I_{2^{n-1}} \tensor
 \end{pmatrix} = 
 2I_{2^n} 
 \end{align*}
-
+Use Induction: \\
+When $n = 1$ we have $W_1 = 
+\begin{pmatrix}
+1 &1 \\
+1 &-1
+\end{pmatrix}$, So $
+W_1^T \cdot W_1 = 
+\begin{pmatrix}
+2 &0 \\
+0 &2
+\end{pmatrix} = B_1
+$. \\
+Suppose it is true when $n = k$, we have $W_k^T W_k = B_k$, then when $n = k + 1$ 
+\begin{align*}
+W_{k+1}^TW_{k+1} &= 
+\begin{pmatrix}
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]^T \\
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]^T 
+\end{pmatrix} \cdot
+\begin{pmatrix}
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+[W_k^T \tensor 
+\begin{pmatrix}
+1 
+&1
+\end{pmatrix}]
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+&
+[W_k^T \tensor 
+\begin{pmatrix}
+1 
+&1
+\end{pmatrix}]
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+\\
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 
+&-1
+\end{pmatrix}]
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+&
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 
+&-1
+\end{pmatrix}]
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+W_k^TW_k \tensor I  & \mathbf{0} \\
+\mathbf{0} & I_{2^k} \tensor 2
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+2B_k \tensor I  & \mathbf{0} \\
+\mathbf{0} & 2I_{2^k} 
+\end{pmatrix} =
+2\begin{pmatrix}
+B_k & \mathbf{0} \\
+\mathbf{0} &I_{2^k} 
+\end{pmatrix} \\
+&=
+B_{k+1}
+\end{align*}
 
 
 
