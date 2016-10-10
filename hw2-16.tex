@@ -813,19 +813,11 @@ W_{n, k}^{-1} =
 
 
 \vspace {0.25cm}\noindent
-{\bf Problem B6 (20 pts).}
-Prove that 
-for every vector space $E$, if $\mapdef{f}{E}{E}$ is an idempotent
-linear map, i.e., $f\circ f = f$, then we have a direct sum
-\[
-E = \Ker{f} \oplus \Im{f},
-\]
-so that $f$ is the projection onto its image $\Im{f}$.
-
-
+{\bf Problem B6 (20 pts).} \\
+$E$ is a vector space, and the linear map $f:E \rightarrow E$ is a projection if it's linear. Any vector $u \in E$ can be expressed as $u = fu + (1-f)u$, where $f(u) = Im(f)$ and $(1-f) = Ker(f)$. Since any element $a$ which in both the $Ker(f)$ and $Im(f)$ must be $0$ because $b \in Im(f)$ mean that $b = fb$, while $b = ker(f)$ that $fb = 0$. So $E$ splits into a direct sum of $Im(f)$ and $Ker(f)$. 
 
 \vspace {0.25cm}\noindent
-{\bf Problem B7 (20 pts).}
+{\bf Problem B7 (20 pts).} \\
 Let $U_1, \ldots, U_p$ be any  $p \geq 2$  subspaces of some vector
 space $E$ and recall that the linear map
 \[
@@ -870,14 +862,12 @@ U_i \cap \bigg(\sum_{j = 1, j \not= i}^p U_j \bigg) = (0)
 then $Z = \Ker a = (0)$.
 
 \medskip
-(2)
-Prove that $U_1 + \cdots + U_p$ is a direct sum iff
+(2) \\
+We can use the definition of a vector space to prove this. The vector space $E$ is the direct sum of 2 more subspaces, $U_1 + \cdots + U_p$. The subspaces span the whole space $E$ and have the ${0}$ intersection. Thus $U_1 + \cdots + U_p$ is a direct sum iff
 \[
 U_i \cap \bigg(\sum_{j = 1, j \not= i}^p U_j \bigg) = (0)
 \quad 1 \leq i \leq p.
-\] \\
-
-We can use the definition of a vector space to prove this. The vector space $E$ is the direct sum of 2 more subspaces, $U_1 + \cdots + U_p$. The subspaces span the whole space $E$ and have the ${0}$ intersection.  
+\]    \\
 
 \medskip\noindent
 (3)
