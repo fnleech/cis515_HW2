@@ -235,7 +235,7 @@ W_{3, 3} \cdot (1/2) \transpos{W_{3, 3}}=
 \] 
 
 \medskip
-(3) \\
+(3) \\%
 \pmb{First: $W_{3, 2} c = (c_1 + c_3, c_1- c_3, c_2 + c_4, c_2 - c_4, c_5, c_6, c_7, c_8)$}
 
 \[
@@ -821,16 +821,8 @@ linear map, i.e., $f\circ f = f$, then we have a direct sum
 E = \Ker{f} \oplus \Im{f},
 \]
 so that $f$ is the projection onto its image $\Im{f}$.
-We can use Proposition 3.1 to prove that $E=Ker(f)\oplus Im(f)$.
-According to the proposition, given vector space $E$, $Ker(f)+Im(f)$
-is a direct sum iff $Ker(f)\cap Im(f)=(0)$. 
 
-$\left\{ x\epsilon E|f(x)=0\right\} \cap\left\{ y\epsilon E|(\exists x\epsilon E)(f(x)=y)\right\} =(0)$
 
-Let's define $f(x)=Ax$; Then, $f(f(x))=A^{2}x=Ax$. To find $Ker(f)$,
-$A^{2}x=Ax=0\Rightarrow x=0$.
-
-$Ker(f)=0$ so $Ker(f)\cap Im(f)=(0)$ and $E=Ker(f)\oplus Im(f)$.
 
 \vspace {0.25cm}\noindent
 {\bf Problem B7 (20 pts).}
@@ -883,8 +875,9 @@ Prove that $U_1 + \cdots + U_p$ is a direct sum iff
 \[
 U_i \cap \bigg(\sum_{j = 1, j \not= i}^p U_j \bigg) = (0)
 \quad 1 \leq i \leq p.
-\]
+\] \\
 
+We can use the definition of a vector space to prove this. The vector space $E$ is the direct sum of 2 more subspaces, $U_1 + \cdots + U_p$. The subspaces span the whole space $E$ and have the ${0}$ intersection.  
 
 \medskip\noindent
 (3)
