@@ -464,119 +464,99 @@ inv(W_{3, 1}) =
 \\
 
 \medskip
-(5)
-For any $n\geq 2$, the $2^n \times 2^n$ matrix $W_{n, n}$ is obtained form the
-two rows
+(5) We can find that 
 \begin{align*}
-& \underbrace{1, 0, \ldots, 0}_{2^{n - 1}}, \underbrace{1, 0, \ldots,  0}_{2^{n - 1}} \\
-& \underbrace{1, 0, \ldots, 0}_{2^{n - 1}}, \underbrace{-1, 0, \ldots,  0}_{2^{n - 1}} 
+W_{n,n} = 
+\begin{pmatrix}
+1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} &1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} &-1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+0 &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+0 &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &-1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+\cdots &\cdots &\cdots &\cdots &\cdots \\
+&\overbrace{\cdots 0}^{2^{n-1}-1} &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &1 \\
+&\overbrace{\cdots 0}^{2^{n-1}-1} &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &-1
+\end{pmatrix}
 \end{align*}
-by shifting them $2^{n - 1} - 1$ times over to the right by inserting a zero
-on the left each time.
-
-\medskip
-Given any vector $c = (c_1, c_2, \ldots, c_{2^n})$, show that $W_{n, n} c$
-is the result of the last step in  the
-process of reconstructing a vector from its Haar coefficients $c$.
-Prove that $W_{n, n}^{-1} = (1/2)\transpos{W_{n, n}}$, and that the
-columns and the rows
-of $W_{n, n}$ are orthogonal.
+So 
+\begin{align*}
+W_{n,n}c =
+\begin{pmatrix}
+c_1 + c_{2^{n-1} + 1} \\
+c_1 - c_{2^{n-1} + 1} \\
+c_2 + c_{2^{n-1} + 2} \\
+c_2 - c_{2^{n-1} + 2} \\
+c_3 + c_{2^{n-1} + 3} \\
+c_3 - c_{2^{n-1} + 3} \\
+ \vdots \\
+c_{2^{n-1}} + c_{2^{n}} \\
+c_{2^{n-1}} - c_{2^{n}}
+\end{pmatrix}
+\end{align*}
+It is the last step in process of reconstructing a vector from its Haar coefficients c. \\
+Write $W_{n,n} = 
+\begin{pmatrix}
+v_1^T \\
+v_2^T \\
+\vdots \\
+v_{2^{n}}^T 
+\end{pmatrix}
+$, So $W_{n,n}^T W_{n,n} = 
+\begin{pmatrix}
+v_1 &v_2 &v_3 \cdots &v_{2^n}
+\end{pmatrix}
+\begin{pmatrix}
+v_1^T \\
+v_2^T \\
+\vdots \\
+v_{2^{n}}^T 
+\end{pmatrix}　=　
+\sum_{i=1}^{2^n} v_iv_i^T
+$.
+Because we can calculate that 
+$
+v_i v_i^T = 
+\begin{pmatrix}
+0 &0 &0 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots\\
+0 &\cdots &1 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &\cdots &0 &1 &\cdots \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &0 &0 &\cdots &0 
+\end{pmatrix}
+$ there are two $1$ in the diagonal. Because we have pairs 
+$u_i = (\underbrace{0,0,\cdots, 1, \cdots,0,0,}_{2^{n-1}}\underbrace{0,0,\cdots, 1, \cdots,0,0}_{2^{n-1}})$ and $v_i = (\underbrace{0,0,\cdots, 1, \cdots,0,0,}_{2^{n-1}}\underbrace{0,0,\cdots, -1, \cdots,0,0}_{2^{n-1}})$, also there is $uu^T + vv^T = 
+\begin{pmatrix}
+0 &0 &0 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots\\
+0 &\cdots &2 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &\cdots &0 &2 &\cdots \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &0 &0 &\cdots &0 
+\end{pmatrix}
+$. When $i \neq j, \; (u_iu_i^T)\cdot(u_ju_j^T) = \mathbf{0}, \;
+(v_iv_i^T)\cdot(v_jv_j^T) = \mathbf{0}
+ $, thus 
+ $
+ W_{n,n}^T W_{n,n} = 2I 
+ \Rightarrow 
+ W_{n,n}^{-1} = \frac{1}{2} W_{n,n}^T 
+ $.
+ When $W_{n,n} = 
+\begin{pmatrix}
+v_1^T \\
+v_2^T \\
+\vdots \\
+v_{2^{n}}^T 
+\end{pmatrix}
+$, it is easy to calculate $
+v_i^T \cdot v_i = 2, \;
+$, $v_i^T \cdot v_j = 0$ or $v_i^T \cdot v_j = 1-1 = 0, \; i \neq j$. So rows are orthogonal, it is the same to prove columns are orthogonal. 
 
 
 \medskip
 {\bf Extra credit (30 pts.)}
-
-\medskip
-Given a $m\times n$ matrix $A = (a_{i j})$ and a $p\times q$ matrix
-$B = (b_{i j})$, the {\it Kronecker product\/} (or {\it tensor
-  product\/}) $A\tensor B$ of $A$ and $B$ is the $mp\times nq$ matrix
-\[
-A\tensor B =
-\begin{pmatrix}
-a_{1 1} B & a_{1 2} B & \cdots & a_{1 n} B \\
-a_{2 1} B & a_{2 2} B & \cdots & a_{2 n} B \\
-\vdots  & \vdots & \ddots & \vdots \\
-a_{m 1} B & a_{m 2} B & \cdots & a_{m n} B 
-\end{pmatrix} .
-\]
-It can be shown (and you may use these facts without proof) that
-$\tensor$ is associative and that
-\begin{align*}
-(A\tensor B)(C\tensor D) & = AC \tensor BD \\
-\transpos{(A\tensor B)} & = \transpos{A} \tensor \transpos{B}, 
-\end{align*}
-whenever $AC$ and $BD$ are well defined.
-
-\medskip
-Check that
-\[
-W_{n, n} =
-\begin{pmatrix}
-I_{2^{n-1}} \tensor 
-\begin{pmatrix}
-1 \\
-1
-\end{pmatrix}
-& 
-I_{2^{n-1}} \tensor 
-\begin{pmatrix}
-1 \\
--1
-\end{pmatrix}
-\end{pmatrix} ,
-\]
-and that
-\[
-W_{n} =
-\begin{pmatrix}
-W_{n-1} \tensor 
-\begin{pmatrix}
-1 \\
-1
-\end{pmatrix}
-& 
-I_{2^{n-1}} \tensor 
-\begin{pmatrix}
-1 \\
--1
-\end{pmatrix}
-\end{pmatrix} .
-\]
-
-
-\medskip
-Use the above to reprove that
-\[
-W_{n, n}\transpos{W_{n, n}} = 2I_{2^n}.
-\]
-Let
-\[
-B_1 =
-2
-\begin{pmatrix}
-1 & 0 \\
-0 & 1
-\end{pmatrix}
-= 
-\begin{pmatrix}
-2 & 0 \\
-0 & 2
-\end{pmatrix}
-\]
-and for $n \geq 1$,
-\[
-B_{n+1} =
-2
-\begin{pmatrix}
-B_n & 0 \\
-0 & I_{2^n}
-\end{pmatrix}.
-\]
-Prove that
-\[
-\transpos{W_n} W_n = B_n, \quad\hbox{for all $n \geq 1$}.
-\]
-
 
 We can find \[
 \begin{pmatrix}
@@ -756,7 +736,109 @@ I_{2^{n-1}} \tensor
 \end{pmatrix} = 
 2I_{2^n} 
 \end{align*}
-
+Use Induction: \\
+When $n = 1$ we have $W_1 = 
+\begin{pmatrix}
+1 &1 \\
+1 &-1
+\end{pmatrix}$, So $
+W_1^T \cdot W_1 = 
+\begin{pmatrix}
+2 &0 \\
+0 &2
+\end{pmatrix} = B_1
+$. \\
+Suppose it is true when $n = k$, we have $W_k^T W_k = B_k$, then when $n = k + 1$ 
+\begin{align*}
+W_{k+1}^TW_{k+1} &= 
+\begin{pmatrix}
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]^T \\
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]^T 
+\end{pmatrix} \cdot
+\begin{pmatrix}
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+[W_k^T \tensor 
+\begin{pmatrix}
+1 
+&1
+\end{pmatrix}]
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+&
+[W_k^T \tensor 
+\begin{pmatrix}
+1 
+&1
+\end{pmatrix}]
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+\\
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 
+&-1
+\end{pmatrix}]
+[W_k \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}]
+&
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 
+&-1
+\end{pmatrix}]
+[I_{2^k} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}]
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+W_k^TW_k \tensor I  & \mathbf{0} \\
+\mathbf{0} & I_{2^k} \tensor 2
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+2B_k \tensor I  & \mathbf{0} \\
+\mathbf{0} & 2I_{2^k} 
+\end{pmatrix} =
+2\begin{pmatrix}
+B_k & \mathbf{0} \\
+\mathbf{0} &I_{2^k} 
+\end{pmatrix} \\
+&=
+B_{k+1}　
+\end{align*}
+So $W_n^TW_n = B_n$.
 
 
 
