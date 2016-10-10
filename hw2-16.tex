@@ -896,13 +896,15 @@ W_{n, k}^{-1} =
 
 \vspace {0.25cm}\noindent
 {\bf Problem B6 (20 pts).}
-Prove that 
-for every vector space $E$, if $\mapdef{f}{E}{E}$ is an idempotent
-linear map, i.e., $f\circ f = f$, then we have a direct sum
-\[
-E = \Ker{f} \oplus \Im{f},
-\]
-so that $f$ is the projection onto its image $\Im{f}$.
+We can use Proposition 3.1 to prove that $E=Ker(f)\oplus Im(f)$.
+According to the proposition, given vector space $E$, $Ker(f)+Im(f)$
+is a direct sum iff $Ker(f)\cap Im(f)=(0)$. 
+ 
+$\left\{ x\epsilon E|f(x)=0\right\} \cap\left\{ y\epsilon E|(\exists x\epsilon E)(f(x)=y)\right\} =(0)$
+
+Let's define $f(x)=Ax$; Then, $f(f(x))=A^{2}x=Ax$. To find $Ker(f)$,
+$A^{2}x=Ax=0\Rightarrow x=0$.
+$Ker(f)=0$ so $Ker(f)\cap Im(f)=(0)$ and $E=Ker(f)\oplus Im(f)$.
 
 
 
