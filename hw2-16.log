@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.2)  9 OCT 2016 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.2)  10 OCT 2016 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -189,22 +189,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--465
 
  []
 
-[6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 887--888
+[6]
+Missing character: There is no ã in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no € in font cmr12!
+
+Overfull \hbox (1.33621pt too wide) in paragraph at lines 494--556
+\OT1/cmr/m/n/12 ([] [])$, also there is $\OML/cmm/m/it/12 uu[] \OT1/cmr/m/n/12 
++ \OML/cmm/m/it/12 vv[] \OT1/cmr/m/n/12 = []$.
+ []
+
+[7] [8]
+Missing character: There is no ã in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no € in font cmr12!
+ [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 960--961
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 916--917
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--919
+Underfull \hbox (badness 10000) in paragraph at lines 991--992
 
  []
 
-[10] (./hw2-16.aux) ) 
+[11] (./hw2-16.aux) ) 
 Here is how much of TeX's memory you used:
  1594 strings out of 494910
  15715 string characters out of 6179836
@@ -212,7 +232,7 @@ Here is how much of TeX's memory you used:
  4915 multiletter control sequences out of 15000+600000
  10417 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 27i,20n,24p,1231b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,21n,24p,1231b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
@@ -225,10 +245,10 @@ ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti12.pfb>
-Output written on hw2-16.pdf (10 pages, 152347 bytes).
+Output written on hw2-16.pdf (11 pages, 154861 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

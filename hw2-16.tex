@@ -464,23 +464,95 @@ inv(W_{3, 1}) =
 \\
 
 \medskip
-(5)
-For any $n\geq 2$, the $2^n \times 2^n$ matrix $W_{n, n}$ is obtained form the
-two rows
+(5) We can find that 
 \begin{align*}
-& \underbrace{1, 0, \ldots, 0}_{2^{n - 1}}, \underbrace{1, 0, \ldots,  0}_{2^{n - 1}} \\
-& \underbrace{1, 0, \ldots, 0}_{2^{n - 1}}, \underbrace{-1, 0, \ldots,  0}_{2^{n - 1}} 
+W_{n,n} = 
+\begin{pmatrix}
+1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} &1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} &-1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+0 &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+0 &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &-1 &\overbrace{0 \cdots 0}^{2^{n-1}-1} \\
+\cdots &\cdots &\cdots &\cdots &\cdots \\
+&\overbrace{\cdots 0}^{2^{n-1}-1} &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &1 \\
+&\overbrace{\cdots 0}^{2^{n-1}-1} &1 &\overbrace{\cdots 0}^{2^{n-1}-1} &-1
+\end{pmatrix}
 \end{align*}
-by shifting them $2^{n - 1} - 1$ times over to the right by inserting a zero
-on the left each time.
-
-\medskip
-Given any vector $c = (c_1, c_2, \ldots, c_{2^n})$, show that $W_{n, n} c$
-is the result of the last step in  the
-process of reconstructing a vector from its Haar coefficients $c$.
-Prove that $W_{n, n}^{-1} = (1/2)\transpos{W_{n, n}}$, and that the
-columns and the rows
-of $W_{n, n}$ are orthogonal.
+So 
+\begin{align*}
+W_{n,n}c =
+\begin{pmatrix}
+c_1 + c_{2^{n-1} + 1} \\
+c_1 - c_{2^{n-1} + 1} \\
+c_2 + c_{2^{n-1} + 2} \\
+c_2 - c_{2^{n-1} + 2} \\
+c_3 + c_{2^{n-1} + 3} \\
+c_3 - c_{2^{n-1} + 3} \\
+ \vdots \\
+c_{2^{n-1}} + c_{2^{n}} \\
+c_{2^{n-1}} - c_{2^{n}}
+\end{pmatrix}
+\end{align*}
+It is the last step in process of reconstructing a vector from its Haar coefficients c. \\
+Write $W_{n,n} = 
+\begin{pmatrix}
+v_1^T \\
+v_2^T \\
+\vdots \\
+v_{2^{n}}^T 
+\end{pmatrix}
+$, So $W_{n,n}^T W_{n,n} = 
+\begin{pmatrix}
+v_1 &v_2 &v_3 \cdots &v_{2^n}
+\end{pmatrix}
+\begin{pmatrix}
+v_1^T \\
+v_2^T \\
+\vdots \\
+v_{2^{n}}^T 
+\end{pmatrix}　=　
+\sum_{i=1}^{2^n} v_iv_i^T
+$.
+Because we can calculate that 
+$
+v_i v_i^T = 
+\begin{pmatrix}
+0 &0 &0 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots\\
+0 &\cdots &1 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &\cdots &0 &1 &\cdots \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &0 &0 &\cdots &0 
+\end{pmatrix}
+$ there are two $1$ in the diagonal. Because we have pairs 
+$u_i = (\underbrace{0,0,\cdots, 1, \cdots,0,0,}_{2^{n-1}}\underbrace{0,0,\cdots, 1, \cdots,0,0}_{2^{n-1}})$ and $v_i = (\underbrace{0,0,\cdots, 1, \cdots,0,0,}_{2^{n-1}}\underbrace{0,0,\cdots, -1, \cdots,0,0}_{2^{n-1}})$, also there is $uu^T + vv^T = 
+\begin{pmatrix}
+0 &0 &0 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots\\
+0 &\cdots &2 &\cdots &0 \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &\cdots &0 &2 &\cdots \\
+\vdots &\vdots &\vdots &\vdots &\vdots \\
+0 &0 &0 &\cdots &0 
+\end{pmatrix}
+$. When $i \neq j, \; (u_iu_i^T)\cdot(u_ju_j^T) = \mathbf{0}, \;
+(v_iv_i^T)\cdot(v_jv_j^T) = \mathbf{0}
+ $, thus 
+ $
+ W_{n,n}^T W_{n,n} = 2I 
+ \Rightarrow 
+ W_{n,n}^{-1} = \frac{1}{2} W_{n,n}^T 
+ $.
+ When $W_{n,n} = 
+\begin{pmatrix}
+v_1^T \\
+v_2^T \\
+\vdots \\
+v_{2^{n}}^T 
+\end{pmatrix}
+$, it is easy to calculate $
+v_i^T \cdot v_i = 2, \;
+$, $v_i^T \cdot v_j = 0$ or $v_i^T \cdot v_j = 1-1 = 0, \; i \neq j$. So rows are orthogonal, it is the same to prove columns are orthogonal. 
 
 
 \medskip
@@ -764,8 +836,9 @@ B_k & \mathbf{0} \\
 \mathbf{0} &I_{2^k} 
 \end{pmatrix} \\
 &=
-B_{k+1}
+B_{k+1}　
 \end{align*}
+So $W_n^TW_n = B_n$.
 
 
 
