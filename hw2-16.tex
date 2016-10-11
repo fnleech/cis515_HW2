@@ -552,7 +552,7 @@ v_{2^{n}}^T
 \end{pmatrix}
 $, it is easy to calculate $
 v_i^T \cdot v_i = 2, \;
-$, $v_i^T \cdot v_j = 0$ or $v_i^T \cdot v_j = 1-1 = 0, \; i \neq j$. So rows are orthogonal, it is the same to prove columns are orthogonal. 
+$, $v_i^T \cdot v_j = 0$ or $v_i^T \cdot v_j = 1-1 = 0, \; i \neq j$. So rows are orthogonal, it is the same to prove columns are orthogonal. \\
 
 
 \medskip
@@ -838,53 +838,156 @@ B_k & \mathbf{0} \\
 &=
 B_{k+1}　
 \end{align*}
-So $W_n^TW_n = B_n$.
+So $W_n^TW_n = B_n$.\\
 
 
 
 
 \medskip
 (6)
-The matrix $W_{n, i}$ is obtained from the matrix $W_{i, i}$ 
-($1 \leq i \leq n - 1$) as follows:
-\[
-W_{n, i} = 
-\begin{pmatrix}
- W_{i, i} & 0_{2^{i}, 2^{n} - 2^{i}} \\
-0_{2^{n}- 2^{i}, 2^i} & I_{2^{n} - 2^{i}}
-\end{pmatrix}.
-\]
-It consists of four blocks,
-where  $0_{2^{i}, 2^{n} - 2^{i}}$ and $0_{2^{n} - 2^{i}, 2^i}$
-are matrices of zeros and $I_{2^{n} - 2^{i}}$ is the identity matrix of
-dimension $2^{n} - 2^i$.
-
-\medskip
-Explain what $W_{n, i}$ does to $c$ and prove that
-\[
-W_{n, n} W_{n, n - 1} \cdots W_{n, 1} = W_n,
-\]
-where $W_n$ is the Haar matrix of dimension $2^n$.
-
-\medskip
-\hint
-Use induction on $k$,  with the induction hypothesis
+When $k = 1$, it is easy to prove.\\
+Suppose it is true when $n = k$, 
 \[
 W_{n, k} W_{n, k - 1}\cdots W_{n, 1} = 
 \begin{pmatrix}
  W_{k} & 0_{2^{k}, 2^{n} - 2^{k}} \\
-0_{2^{n}- 2^{k}, 2^k} &  I_{2^{n} - 2^{k}}
+0_{2^{n}- 2^{k}, 2^k} & {2^{n} - 2^{k}}
+\end{pmatrix}.
+\]
+Then when $n = k + 1$,
+\[
+W_{n, k+1} \cdot W_{n, k} W_{n, k - 1}\cdots W_{n, 1} =
+\begin{pmatrix}
+W_{k+1, k+1} & 0_{2^{k+1}, 2^{n} - 2^{k+1}} \\
+0_{2^{n}- 2^{k+1}, 2^i} & I_{2^{n} - 2^{k+1}}
+\end{pmatrix}
+\begin{pmatrix}
+ W_{k} & 0_{2^{k}, 2^{n} - 2^{k}} \\
+0_{2^{n}- 2^{k}, 2^k} & {2^{n} - 2^{k}}
+\end{pmatrix}.
+\]
+From (5) we can easily find that 
+\begin{align*}
+W_{k+1,k+1}c =
+\begin{pmatrix}
+c_1 + c_{2^{k} + 1} \\
+c_1 - c_{2^{k} + 1} \\
+c_2 + c_{2^{k} + 2} \\
+c_2 - c_{2^{k} + 2} \\
+c_3 + c_{2^{k} + 3} \\
+c_3 - c_{2^{k} + 3} \\
+ \vdots \\
+c_{2^{k}} + c_{2^{k+1}} \\
+c_{2^{k}} - c_{2^{k+1}}
+\end{pmatrix}
+\end{align*}
+So 
+\begin{align*}
+&\begin{pmatrix}
+W_{k+1, k+1} & 0_{2^{k+1}, 2^{n} - 2^{k+1}} \\
+0_{2^{n}- 2^{k+1}, 2^i} & I_{2^{n} - 2^{k+1}}
+\end{pmatrix}
+\begin{pmatrix}
+ W_{k} & 0_{2^{k}, 2^{n} - 2^{k}} \\
+0_{2^{n}- 2^{k}, 2^k} & {2^{n} - 2^{k}}
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+W_{k+1, k+1} & 0_{2^{k+1}, 2^{n} - 2^{k+1}} \\
+0_{2^{n}- 2^{k+1}, 2^i} & I_{2^{n} - 2^{k+1}}
+\end{pmatrix}
+\begin{pmatrix}
+ W_{k}^* & 0_{2^{k+1}, 2^{n} - 2^{k+1}} \\
+0_{2^{n}- 2^{k+1}, 2^{k+1}} & I_{2^{n} - 2^{k+1}} \\
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+ W_{k+1, k+1} \cdot W_{k}^* & 0_{2^{k+1}, 2^{n} - 2^{k+1}} \\
+0_{2^{n}- 2^{k+1}, 2^{k+1}} & I_{2^{n} - 2^{k+1}} \\
+\end{pmatrix}
+\end{align*}
+Because 
+\begin{align*}
+W_{k+1, k+1} \cdot W_{k}^* &=
+\begin{pmatrix}
+\begin{pmatrix}
+a_{11} & a_{12} & a_{13} \cdots &a_{1n} \\
+a_{11} & a_{12} & a_{13} \cdots &a_{1n} \\
+a_{21} & a_{22} & a_{23} \cdots &a_{2n} \\
+a_{21} & a_{22} & a_{23} \cdots &a_{2n} \\
+\vdots &\vdots  &\vdots  \cdots &\vdots \\
+a_{2^{k+1}1} & a_{2^{k+1}2} & a_{2^{k+1}3} \cdots &a_{2^{k+1}2^{k+1}} \\
+a_{2^{k+1}1} & a_{2^{k+1}2} & a_{2^{k+1}3} \cdots &a_{2^{k+1}2^{k+1}} \\
+\end{pmatrix}
+&
+\begin{pmatrix}
+1 &0 & 0 \cdots &0 \\
+-1 &0 & 0 \cdots &0 \\
+0 & 1 & 0 \cdots &0 \\
+0 & -1 & 0 \cdots &0 \\
+\vdots &\vdots  &\vdots  \cdots &\vdots \\
+0 & 0 & 0 \cdots &1 \\
+0 & 0 & 0 \cdots &-1 \\
+\end{pmatrix} 
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+W_{k} \tensor 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+&
+I_{2^{k}} \tensor 
+\begin{pmatrix}
+1 \\
+-1
+\end{pmatrix}
+\end{pmatrix} \\
+&= W_{k+1}
+\end{align*}
+So it is true when $n = k + 1$, thus 
+\[
+W_{n, k} W_{n, k - 1}\cdots W_{n, 1} = 
+\begin{pmatrix}
+ W_{k} & 0_{2^{k}, 2^{n} - 2^{k}} \\
+0_{2^{n}- 2^{k}, 2^k} & {2^{n} - 2^{k}}
 \end{pmatrix}.
 \]
 
-
 \medskip
-Prove that the columns and rows of $W_{n, k}$ are orthogonal, and use
-this to prove that the columns of $W_n$ and the rows of
-$W_n^{-1}$ are orthogonal. 
-Are the rows of  $W_n$ orthogonal?
-Are the columns of  $W_n^{-1}$ orthogonal?
-Prove that
+From above, 
+Because $W_{n,k}^T \cdot W_{n,k} = 
+\begin{pmatrix}
+W_{k,k}^T \cdot W_{k,k} &\mathbf{0} \\
+\mathbf{0} &I
+\end{pmatrix} = 
+\begin{pmatrix}
+2I &\mathbf{0} \\
+\mathbf{0} &I
+\end{pmatrix}  
+$ and \\
+$W_{n,k} \cdot W_{n,k}^T = 
+\begin{pmatrix}
+W_{k,k}\cdot W_{k,k}^T &\mathbf{0} \\
+\mathbf{0} &I
+\end{pmatrix} = 
+\begin{pmatrix}
+2I &\mathbf{0} \\
+\mathbf{0} &I
+\end{pmatrix}  
+$ thus rows and columns of $W_{n,k}$ are orthogonal. \\
+And 
+$W_{n,k} \cdot \begin{pmatrix}
+ \frac{1}{2}\transpos{W_{k, k}} & 0_{2^{k}, 2^{n} - 2^{k}} \\
+0_{2^{n}- 2^{k}, 2^k} &  I_{2^{n} - 2^{k}}
+\end{pmatrix} = 
+\begin{pmatrix}
+W_{k,k}\cdot \frac{1}{2} W_{k,k}^T &\mathbf{0} \\
+\mathbf{0} &I
+\end{pmatrix} =
+I
+$, so 
 \[
 W_{n, k}^{-1} = 
 \begin{pmatrix}
@@ -892,7 +995,6 @@ W_{n, k}^{-1} =
 0_{2^{n}- 2^{k}, 2^k} &  I_{2^{n} - 2^{k}}
 \end{pmatrix}.
 \]
-
 
 \vspace {0.25cm}\noindent
 {\bf Problem B6 (20 pts).}
