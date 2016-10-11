@@ -38,7 +38,7 @@ Suppose $A = (a_{i,j})_{m \times n}$, $B = (b_{i,j})_{n \times p}$, C = $AB = (c
 It is easy to write $c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj},\; \forall i = 1,2,\cdots m.\; j = 1,2,\cdots p$ 
 and then consider $(A^1B_1 + \cdots + A^nB_n)_{ij}$, we have $  (A^1B_1 + \cdots + A^nB_n)_{ij} = (a_{i1}b_{1j} + a_{i2}b_{2j} \cdots a_{in}b_{nj}) = \sum_{k=1}^{n} a_{ik} b_{kj}$. So $AB = A^1B_1 + \cdots + A^nB_n$.
 
-
+\medskip
 \vspace {0.25cm}\noindent
 {\bf Problem B2 (10 pts).} \\
 Because $f$ is a linear map, thus we have 
@@ -121,7 +121,7 @@ for an $mxn$ matrix.
 
 
 
-
+\medskip
 \vspace {0.25cm}\noindent
 {\bf Problem B5 (120 pts).} \\
 \medskip
@@ -898,16 +898,10 @@ W_{n, k}^{-1} =
 {\bf Problem B6 (20 pts).}
 We can use Proposition 3.1 to prove that $E=Ker(f)\oplus Im(f)$.
 According to the proposition, given vector space $E$, $Ker(f)+Im(f)$
-is a direct sum iff $Ker(f)\cap Im(f)=(0)$. 
- 
-$\left\{ x\epsilon E|f(x)=0\right\} \cap\left\{ y\epsilon E|(\exists x\epsilon E)(f(x)=y)\right\} =(0)$
+is a direct sum iff $Ker(f)\cap Im(f)=(0)$. \\
+Let $u \in E$ then calculate $v = u - f(u)$, because $f$ is an idempotent linear map $f \circ f = f$ which means $f(v) = f(u - f(u)) = f(u) - f^2(u) = 0$. Thus $v \in ker(f)$, So $E = Ker(f) + Im(f)$. Let $u^* \in Ker(f) \cap Im(f)$, then $u^* = f(s), \exists s \in E$.Because $s = f(u^*) = f \circ f(u^*) = 0$ and $f$ is a linear map, $u^* = f(s) = 0$, which means $Ker(f) \cap Im(f)=(0)$, then $E = Ker(f) \oplus Im(f)$.
 
-Let's define $f(x)=Ax$; Then, $f(f(x))=A^{2}x=Ax$. To find $Ker(f)$,
-$A^{2}x=Ax=0\Rightarrow x=0$.
-$Ker(f)=0$ so $Ker(f)\cap Im(f)=(0)$ and $E=Ker(f)\oplus Im(f)$.
-
-
-
+\medskip
 \vspace {0.25cm}\noindent
 {\bf Problem B7 (20 pts).}
 Let $U_1, \ldots, U_p$ be any  $p \geq 2$  subspaces of some vector
