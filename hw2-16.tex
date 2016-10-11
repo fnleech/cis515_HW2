@@ -844,9 +844,31 @@ So $W_n^TW_n = B_n$.\\
 
 
 \medskip
+<<<<<<< HEAD
 (6)
 When $k = 1$, it is easy to prove.\\
 Suppose it is true when $n = k$, 
+=======
+To understand what $W_{n.i}$ does to a vector $c=(c_{1},c_{2},\cdots c_{2^{n}})$,
+let's define $(c_{A}+c_{B}),(c_{A}-c_{B})$ to be a pair. When $W_{n.i}$
+acts on c, it reconstructs c so that it still contains $2^{n}$elements
+but among the elements, there are $2^{i-1}$ pairs going from left
+to right. For example, $W_{3,2}c=(c_{1}+c_{3},c_{1}-c_{3},c_{2}+c_{4},c_{2}-c_{4},c_{5},c_{6},c_{7},c_{8})$
+shows $2^{2-1}=2$ pairs consisting of $c_{1},c_{3}$and $c_{2},c_{4}.$
+Furthermore, for every pair consisting of $c_{A},c_{B}$, $B=A+2^{i-1}$.
+It appears that as the difference between $n$ and $i$ get smaller,
+more of the elements from the original vector $c$ get reconstructed
+as a sum and difference with another element from $c$. 
+
+(2) We can prove that $W_{n,n}W_{n,n-1}\cdots W_{n,1}=W_{n}$
+
+We are given that $W_{n,k}=\begin{pmatrix}W_{k,k} & 0_{2^{k,},2^{n}-2^{k}}\\
+0_{2^{n}-2^{k,},2^{k}} & I_{2^{n}-2^{k}}
+\end{pmatrix}$; When $k=1$, $W_{n,1}=\begin{pmatrix}W_{1,1} & 0_{2^{k,},2^{n}-2}\\
+0_{2^{n}-2,2} & I_{2^{n}-2}(6)
+The matrix $W_{n, i}$ is obtained from the matrix $W_{i, i}$ 
+($1 \leq i \leq n - 1$) as follows:
+>>>>>>> fa62a06bb57ff51b9d8e577a97ec42cac48b5756
 \[
 W_{n, k} W_{n, k - 1}\cdots W_{n, 1} = 
 \begin{pmatrix}
