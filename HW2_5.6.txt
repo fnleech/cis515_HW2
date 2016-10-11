@@ -1,0 +1,48 @@
+
+To prove we need to show the following:
+
+W_{n,k}W_{n,k}^-1 = I_{2^n}
+
+\begin{bmatrix}
+
+W_{k,k} & 0_{2^k,2^n-2^k}\\
+
+0_{2^n-2^k,2^k} & I_{2^n-2^k}
+
+\end{bmatrix}
+
+
+\begin{bmatrix}
+
+(1/2)W_{k,k}^T & 0_{2^k,2^n-2^k}\\
+
+
+0_{2^n-2^k,2^k} & I_{2^n-2^k}
+
+\end{bmatrix}
+
+
+=
+
+\begin{bmatrix}
+
+W_{k,k}(1/2)W_{k,k}^T + 0_{2^k,2^n-2^k}0_{2^k,2^n-2^k} & W_{k,k}0_{2^k,2^n-2^k}+ 0_{2^k,2^n-2^k}I_{2^n-2^k}\\
+
+0_{2^n-2^k,2^k}(1/2)W_{k,k}^T + I_{2^n-2^k}0_{2^n-2^k,2^k} & 0_{2^n-2^k,2^k}0_{2^k,2^n-2^k} + I_{2^n-2^k}I_{2^n-2^k}
+
+\end{bmatrix}
+
+=
+
+
+\begin{bmatrix}
+
+I_{2^k} & 0_{2^k,2^n-2^k}\\
+0_{2^n-2^k,2^k} & I_{2^n-2^k}
+
+
+\end{bmatrix}
+
+=
+
+I_{2^n}

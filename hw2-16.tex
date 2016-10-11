@@ -73,15 +73,6 @@ indicates that $(v_{i})_{i\epsilon I}$ must span $F$.\\
 
 \vspace {0.25cm}\noindent
 {\bf Problem B4 (10 pts).} \\
-Let $\mapdef{f}{E}{F}$ be a linear map 
-with $\mathrm{dim}(E) = n$ and $\mathrm{dim}(F)  = m$.
-Prove that $f$ has rank $1$ iff $f$ is represented by an
-$m\times n$ matrix of the form
-\[
-A = u\transpos{v}
-\]
-with $u$ a nonzero column vector of dimension $m$ and $v$ a 
-nonzero column vector  of dimension $n$.
 $dim(E)=n$ indicates that the basis of $E$ consists of $n$ vectors
 and $dim(F)=m$ indicates the basis of $F$ consists of $m$ vectors.
 From class notes, we know that $M(f)=\begin{pmatrix}a_{11} & \cdots & a_{1n}\\
@@ -840,15 +831,11 @@ B_{k+1}　
 \end{align*}
 So $W_n^TW_n = B_n$.\\
 
-
-
-
 \medskip
-<<<<<<< HEAD
+
 (6)
 When $k = 1$, it is easy to prove.\\
 Suppose it is true when $n = k$, 
-=======
 To understand what $W_{n.i}$ does to a vector $c=(c_{1},c_{2},\cdots c_{2^{n}})$,
 let's define $(c_{A}+c_{B}),(c_{A}-c_{B})$ to be a pair. When $W_{n.i}$
 acts on c, it reconstructs c so that it still contains $2^{n}$elements
@@ -864,18 +851,20 @@ as a sum and difference with another element from $c$.
 
 We are given that $W_{n,k}=\begin{pmatrix}W_{k,k} & 0_{2^{k,},2^{n}-2^{k}}\\
 0_{2^{n}-2^{k,},2^{k}} & I_{2^{n}-2^{k}}
-\end{pmatrix}$; When $k=1$, $W_{n,1}=\begin{pmatrix}W_{1,1} & 0_{2^{k,},2^{n}-2}\\
-0_{2^{n}-2,2} & I_{2^{n}-2}(6)
-The matrix $W_{n, i}$ is obtained from the matrix $W_{i, i}$ 
+\end{pmatrix}$; 
+
+When $k=1$, $W_{n,1}=\begin{pmatrix}W_{1,1} & 0_{2^{k,},2^{n}-2}\\
+0_{2^{n}-2,2} & I_{2^{n}-2}(6)\end{pmatrix}$
+The matrix $W_{n, i}$ is obtained from the matrix $W_{i, i}$
 ($1 \leq i \leq n - 1$) as follows:
->>>>>>> fa62a06bb57ff51b9d8e577a97ec42cac48b5756
 \[
 W_{n, k} W_{n, k - 1}\cdots W_{n, 1} = 
 \begin{pmatrix}
  W_{k} & 0_{2^{k}, 2^{n} - 2^{k}} \\
-0_{2^{n}- 2^{k}, 2^k} & {2^{n} - 2^{k}}
+0_{2^{n}- 2^{k}, 2^k} & {2^{n} - 2^{k}} 
 \end{pmatrix}.
 \]
+
 Then when $n = k + 1$,
 \[
 W_{n, k+1} \cdot W_{n, k} W_{n, k - 1}\cdots W_{n, 1} =
