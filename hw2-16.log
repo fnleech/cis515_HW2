@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 OCT 2016 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 OCT 2016 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -220,22 +220,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 831--833
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1072--1073
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1072
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
 
  []
 
@@ -260,7 +260,7 @@ m/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb>
-Output written on hw2-16.pdf (13 pages, 152145 bytes).
+Output written on hw2-16.pdf (13 pages, 152192 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
